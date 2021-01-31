@@ -1,3 +1,17 @@
+:root {
+  --amplify-primary-color: #ff6347;
+  --amplify-primary-tint: #ff7359;
+  --amplify-primary-shade: #e0573e;
+}
+
+amplify-authenticator {
+  background-image: url(login.jpg);
+  padding: 900px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
 /* * {
   box-sizing: border-box; 
   background-color: rgb(208, 187, 187);
@@ -73,9 +87,6 @@ body {
   font-size: 1.4rem;
   transition: background-color 250ms;
 }
-
-
-
 
 .button {
   background-color: rgba(0, 0, 0, 0.85);
