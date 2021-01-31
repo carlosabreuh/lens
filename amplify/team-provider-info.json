@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyb972ae0142704-staging-191937-authRole",
+      "UnauthRoleArn": "arn:aws:iam::340468342120:role/amplify-amplifyb972ae0142704-staging-191937-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::340468342120:role/amplify-amplifyb972ae0142704-staging-191937-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplifyb972ae0142704-staging-191937-deployment",
+      "UnauthRoleName": "amplify-amplifyb972ae0142704-staging-191937-unauthRole",
+      "StackName": "amplify-amplifyb972ae0142704-staging-191937",
+      "StackId": "arn:aws:cloudformation:us-east-2:340468342120:stack/amplify-amplifyb972ae0142704-staging-191937/42c511b0-63f9-11eb-a6af-02b0a996e974",
+      "AmplifyAppId": "d2vt17q3zaq50u"
+    },
+    "categories": {
+      "auth": {
+        "PhotoApp": {}
+      }
+    }
+  }
+}
