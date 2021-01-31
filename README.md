@@ -1,2 +1,2 @@
-# Photo-App
-Photo Search
+# React_Photo_App
+React_Photo_App
