@@ -3,8 +3,8 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import './App.css';
 import SearchPhotos from './searchPhotos';
 import Amplify, { Auth } from 'aws-amplify';
-// import awsconfig from './aws-exports';
-// Amplify.configure(awsconfig);
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 function App() {
   return (
