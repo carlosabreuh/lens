@@ -40,6 +40,7 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
           onChange={(e) => setQuery(e.target.value)} //This will update the state of our value
         />
         <button type="submit" className="button">Search</button>
+        
       </form>
       <div className="card-list">
           {
