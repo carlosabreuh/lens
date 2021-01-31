@@ -10,11 +10,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1 className="tittle">React Photo Search</h1>
+        <h2 className="tittle">React Photo Search</h2>
         <SearchPhotos />
         <div className="signout">
           <AmplifySignOut />
-          My App
         </div>
       </div>
     </div>
