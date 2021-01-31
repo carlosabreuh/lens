@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import SearchPhotos from './searchPhotos';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 function App() {
   return (
@@ -8,9 +9,13 @@ function App() {
       <div className="container">
         <h1 className="tittle">React Photo Search</h1>
         <SearchPhotos />
-      </div> 
+        <div>
+          <AmplifySignOut />
+          My App
+        </div>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
