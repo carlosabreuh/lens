@@ -16,7 +16,7 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
     const searchPhotos = async (e) => {
         e.preventDefault();
         unsplash.search
-        .photos(query, 1, 100)
+        .photos(query, 1, 50)
         .then(toJson)
         .then((json) => {
             setPics(json.results);
