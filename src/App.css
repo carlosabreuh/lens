@@ -49,7 +49,7 @@ body {
 .container {
   margin: 2 auto;
   /* max-width: 100px; */
-  padding: 40px;
+  padding: 20px;
   
 }
 
@@ -94,7 +94,7 @@ body {
 }
 
 .card-list {
-  column-count: 3;
+  column-count: 5;
 }
 
 .card {
@@ -104,8 +104,8 @@ body {
 
 .card--image {
   flex: 100%;
-  margin-top: 2rem;
-  border-radius: 80px;
+  margin-top: 1rem;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
