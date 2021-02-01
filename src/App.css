@@ -31,15 +31,16 @@ amplify-authenticator {
 } */
 
 body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background-color: white;
 	background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  /* animation: gradient 15s ease infinite; */
   font-size: 10px;
   box-sizing: border-box; 
   background-repeat: inherit;
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -49,7 +50,7 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}
+} */
 
 .App {
   margin: 0;
