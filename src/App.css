@@ -1,15 +1,16 @@
 :root {
   --amplify-primary-color: #ff6347;
-  --amplify-primary-tint: #ff7359;
+  --amplify-primary-tint: #7d2b1c;
   --amplify-primary-shade: #e0573e;
 }
 
 amplify-authenticator {
   background-image: url(login.jpg);
-  padding: 900px;
+  padding: 1000px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
 
 }
 /* * {

@@ -41,6 +41,7 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
         />
         <button type="submit" className="button">Search</button>
         
+        
       </form>
       <div className="card-list">
           {
