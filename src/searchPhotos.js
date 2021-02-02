@@ -1,6 +1,7 @@
 // import React from "react";
 import React, { useState } from 'react';
 import Unsplash, {toJson } from 'unsplash-js';
+// import Modal from './Modal';
 
  //toJson is a helper function in the unsplash-js library that is used to convert the response into JSON format.
 
@@ -10,8 +11,8 @@ const unsplash = new Unsplash({
 
 export default function SearchPhotos(keyword, page, per_page, filters) {
     const [query, setQuery] = useState(""); //Defining the State
-    const [pics, setPics] = useState([]);
-    const [isExpanded, setExpand] = useState(false);
+    const [pics, setPics, likes] = useState([]);
+    const [closeModal, setExpand] = useState(false);
 
     
     const expand = () => {
@@ -57,14 +58,13 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
               className="card--image"
               alt={pic.alt_description} //alt desctription of the image
               src={pic.urls.small} //path of the image
+              // likes: {this.state.count}
               width="50%"
               height="50%"
-              onClick={expand}
+              // onClick={}
               
-
-             
-
             ></img>
+            <button> ❤️ </button>
           </div>
         ))}
       </div>
