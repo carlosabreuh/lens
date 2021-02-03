@@ -1,27 +1,30 @@
-import React from 'react';
+import { Component } from "react";
+// import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-const Modal = (props) => {
-  const divStyle = {
-    display: props.displayModal ? 'block' : 'none',
-  };
 
-  function closeModal(e) {
-    e.stopPropagation();
-    props.closeModal();
-  }
-  return (
-    <div className='modal' onClick={closeModal} style={divStyle}>
-      <div className='modal-content'>
-          onClick={ e => e.stopPropagation () }  
+const modalRoot = document.getElementById('modal');
+const element = document.createElement('div');
 
-        <span 
-        className='close'>&times;
-        onClick={ closeModal }&times;
-        </span>
-      </div>
-    </div>
-  );
-};
+
+class Modal extends Component {
+    componentDidMount(){
+        modalRoot.appendChild(element)
+    }
+    componentWillUnmount(){
+        modalRoot.removeChild(element)
+    }
+    render() {
+        return ReactDOM.createPortal(this.props.children, element)
+
+        
+    }
+        
+    
+
+}
+
+
 
 export default Modal;
 

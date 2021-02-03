@@ -17,21 +17,29 @@ function App() {
   //   this.setState({ modal: !this.state.modal }); // true/false toggle
   // };
   /**Modals component */
+  
 
   return (
+
+    
     <div className='App'>
       {/* <p onClick={this.selectModal}>Open Modal</p>
       <Modal />
       displayModal={this.state.modal}
       closeModal={this.selectModal} */}
+      
     <div><AmplifySignOut /></div>
+
+    
 
       <div className='container'>
         {/* <div className='signout'> */}
+        
 
         <h2 className='tittle'>React Photo Search</h2>
         <SearchPhotos />
       </div>
+      
     </div>
   );
 }
