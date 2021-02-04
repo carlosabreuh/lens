@@ -11,11 +11,13 @@ function App() {
   const [likedPic, addToCollection] = useState([]);
   return (
     <>
+    <AmplifySignOut />
       <Router>
         <div className='topnav'>
           <ul>
             <li>
               <Link to='/'>Home</Link>
+              
             </li>
             <li>
               <Link to='/about'>About</Link>
@@ -23,11 +25,14 @@ function App() {
             <li>
               <Link to='/collection'>Collection</Link>
             </li>
+            
           </ul>
-          <ul>
-            <AmplifySignOut />
-          </ul>
-
+          
+           
+          
+          <div className='container'>
+            <h2 className='tittle'>React Photo Search</h2>
+          </div>
           <hr />
 
           <Switch>
@@ -51,11 +56,7 @@ function App() {
         </div>
       </Router>
 
-      <div className='App'>
-        <div className='container'>
-          <h2 className='tittle'>React Photo Search</h2>
-        </div>
-      </div>
+      <div className='App'></div>
     </>
   );
 }
@@ -63,7 +64,7 @@ function App() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      <h2></h2>
     </div>
   );
 }
@@ -71,7 +72,7 @@ function Home() {
 function About() {
   return (
     <div>
-      <h2>About</h2>
+      <h2></h2>
     </div>
   );
 }
@@ -79,7 +80,7 @@ function About() {
 function Collection({ likedPic, addToCollection }) {
   return (
     <div>
-      <h2>Collection</h2>
+      <h2></h2>
     </div>
   );
 }
