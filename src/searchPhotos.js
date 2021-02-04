@@ -11,27 +11,18 @@ const unsplash = new Unsplash({
   accessKey: 'fh5tKV6AI5-k6RljpGlqQVWy8z0aVe7PZzlmKIBfh0U', //Access key to make API calls to Unsplash
 });
 
-export default function SearchPhotos(keyword, page, per_page, filters) {
+export default function SearchPhotos({ addToCollection, likedPic }) {
   const [query, setQuery] = useState(''); //Defining the State
   const [pics, setPics, likes] = useState([]);
   // const [closeModal, setExpand] = useState(false);
 
   const [modal, setModal] = useState(false);
-  const [currentPic, setCurrentPic] = useState (null);
-
-  // const handleClick = () => {
-  //   console.log('clicked!');
-  // };
-
-  // const expand = () => {
-  //   setExpand(!true);
-  //   console.log('clicked!');
-  // };
+  const [currentPic, setCurrentPic] = useState(null);
 
   const searchPhotos = async (e) => {
     e.preventDefault();
     unsplash.search
-      .photos(query, 1, 30)
+      .photos(query, 1, 10)
       .then(toJson)
       .then((json) => {
         setPics(json.results);
@@ -64,15 +55,14 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
             <img
               className='card--image'
               alt={pic.alt_description} //alt desctription of the image
-              src={pic.urls.small} //path of the image
+              src={pic.urls.regular} //path of the image
               width='50%'
               height='50%'
               onClick={() => {
-                setModal(!modal)
-                setCurrentPic(pic)
+                setModal(!modal);
+                setCurrentPic(pic);
               }}
             ></img>
-            
           </div>
         ))}
       </div>
@@ -80,11 +70,16 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
       {modal ? (
         <Modal>
           <div className='modal'>
-            Test
-            <img src={currentPic.urls.small}></img>
-            <button> ❤️ </button>
-            <button onClick={() => setModal(!modal)}>X</button>
-            
+            <img className='modal-body' src={currentPic.urls.regular}></img>
+            <button onClick={() => addToCollection([currentPic, ...likedPic])}>
+              {' '}
+              ❤️{' '}
+            </button>
+            {/* <button tittle='Add to collection' className='addtocollection'>
+              {' '}
+              ➕{' '}
+            </button> */}
+            <button onClick={() => setModal(!modal)}>❌</button>
           </div>
         </Modal>
       ) : (
@@ -93,3 +88,5 @@ export default function SearchPhotos(keyword, page, per_page, filters) {
     </>
   );
 }
+
+//keyword, page, per_page, filters
