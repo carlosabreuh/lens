@@ -11,13 +11,12 @@ function App() {
   const [likedPic, addToCollection] = useState([]);
   return (
     <>
-    <AmplifySignOut />
+      <AmplifySignOut />
       <Router>
         <div className='topnav'>
           <ul>
             <li>
               <Link to='/'>Home</Link>
-              
             </li>
             <li>
               <Link to='/about'>About</Link>
@@ -25,11 +24,8 @@ function App() {
             <li>
               <Link to='/collection'>Collection</Link>
             </li>
-            
           </ul>
-          
-           
-          
+
           <div className='container'>
             <h2 className='tittle'>React Photo Search</h2>
           </div>
