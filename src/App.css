@@ -2,15 +2,12 @@
   --amplify-primary-color: #ff6347;
   --amplify-primary-tint: #7d2b1c;
   --amplify-primary-shade: #e0573e;
-  --amplify-primary-color: 
-  #cc1e07; 
+  --amplify-primary-color: #cc1e07;
   transition-duration: 0.4s;
-  
-  
+
   /* Sign In button color*/
   /* --amplify-light-grey: #dd3f5b; */
   --amplify-white: rgba(224, 221, 221, 0.719); /* opacity of Login window*/
-
 }
 
 amplify-authenticator {
@@ -20,7 +17,6 @@ amplify-authenticator {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  
 }
 
 body {
@@ -32,32 +28,36 @@ body {
   background-position: center;
   background-size: cover;
   font-size: 10px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   /* background-repeat: inherit; */
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*Nav Bar*/
+
+.topnav {
+ 
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-   position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
 }
@@ -86,7 +86,7 @@ li a:hover {
 
 .App {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .container {
@@ -113,7 +113,6 @@ li a:hover {
 }
 
 .input {
- 
   width: 400px;
   height: 30px;
   padding: 5px;
@@ -122,11 +121,11 @@ li a:hover {
 }
 
 .button {
-
   width: 60px;
   height: 30px;
   color: white;
   border: none;
+  
 }
 
 .button {
@@ -147,7 +146,7 @@ li a:hover {
   margin-top: 1rem;
   border-radius: 10px;
   grid-gap: 20px;
-  padding: 25px; 
+  padding: 25px;
 }
 
 @media (min-width: 768px) {
@@ -170,23 +169,21 @@ li a:hover {
 /* Background effect. It covers the entire site */
 .modal {
   /* This way it could be display flex or grid or whatever also. */
-  width:50px; /* This value will depend on what size you want for your loading image, let's say it's 50px */
-    height: 50px;
-    overflow: inherit !important;
-    position: absolute;
-    left:20%;
-    top:50%;
-    margin-top:25px; /* This needs to be half of the height */
-    margin-left:10px; /* This needs to be half of the width */
-
+  width: 50px; /* This value will depend on what size you want for your loading image, let's say it's 50px */
+  height: 50px;
+  overflow: inherit !important;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  margin-top: 25px; /* This needs to be half of the height */
+  margin-left: 10px; /* This needs to be half of the width */
 
   /* Use this for centering if unknown width/height */
   transform: translate(-50%, -50%);
-  
+
   /* If known, negative margins are probably better (less chance of blurry text). */
   /* margin: -200px 0 0 -200px; */
-  
+
   background: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
-
