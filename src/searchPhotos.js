@@ -45,9 +45,11 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)} //This will update the state of our value
         />
+        
         <button type='submit' className='button'>
           Search
         </button>
+        
       </form>
       <div className='card-list'>
         {pics.map((pic, index) => (
