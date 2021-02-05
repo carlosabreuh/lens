@@ -14,7 +14,9 @@ function App() {
   const [currentPic, setCurrentPic] = useState(null);
   console.log(
     '%c Thank you for stopping by! 😀  This page was built using React.js, React-Router along with JavaScript ES6 making an API call to Unsplash.🤓   ',
-    'color:blue; font-size:50px'
+    'color:blue; font-size:30px'
+
+    
   );
   var style =
     'color: tomato; background:#eee; -webkit-text-stroke: 1px black; font-size:30px;';
@@ -36,7 +38,7 @@ function App() {
               <Link to='/about'>About</Link>
             </li>
             <li>
-              <Link to='/collection' contenteditable='true'>
+              <Link to='/collection' contentEditable='true'>
                 {' '}
                 Collection
               </Link>
