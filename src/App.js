@@ -12,10 +12,16 @@ function App() {
   const [likedPic, addToCollection] = useState([]);
   const [modal, setModal] = useState(false);
   const [currentPic, setCurrentPic] = useState(null);
-  // console.log('%c Thank you for stopping by! 😀  This page was built using React.js, React-Router along with JavaScript ES6 making an API call to Unsplash.🤓   ', 'color:blue; font-size:50px');
-  // var style =
-  //   'color: tomato; background:#eee; -webkit-text-stroke: 1px black; font-size:30px;';
-  // console.log('%cFeel free to search anything you like and save it to your personal collection.😎   The collection will live for the current session and removed once you log out.😅 -- The application is being hosted with AWS-Amplify, so do not worry about your email ending up in a dark hole🤨, its totally secure! 🤗🦾  Feel free to reach out to me for any questions or suggestions on how i can make this app better! carlos@abreuh.com🤜🤛 ', style);
+  console.log(
+    '%c Thank you for stopping by! 😀  This page was built using React.js, React-Router along with JavaScript ES6 making an API call to Unsplash.🤓   ',
+    'color:blue; font-size:50px'
+  );
+  var style =
+    'color: tomato; background:#eee; -webkit-text-stroke: 1px black; font-size:30px;';
+  console.log(
+    '%cFeel free to search anything you like and save it to your personal collection.😎   The collection will live for the current session and removed once you log out.😅 -- The application is being hosted with AWS-Amplify, so do not worry about your email ending up in a dark hole🤨, its totally secure! 🤗🦾  Feel free to reach out to me for any questions or suggestions on how i can make this app better! carlos@abreuh.com🤜🤛 ',
+    style
+  );
 
   return (
     <>
@@ -30,7 +36,10 @@ function App() {
               <Link to='/about'>About</Link>
             </li>
             <li>
-              <Link to='/collection' contenteditable='true' >  Collection</Link>
+              <Link to='/collection' contenteditable='true'>
+                {' '}
+                Collection
+              </Link>
             </li>
           </ul>
           <div className='container'>
@@ -87,10 +96,17 @@ function About() {
   );
 }
 
-function Collection({ likedPic, addToCollection, setModal, modal, currentPic, setCurrentPic }) {
+function Collection({
+  likedPic,
+  addToCollection,
+  setModal,
+  modal,
+  currentPic,
+  setCurrentPic,
+}) {
   console.log(likedPic);
   const pics = likedPic ? likedPic : [];
-  
+
   return (
     // <img src={likedPic.state.value}
     <div>
@@ -98,10 +114,14 @@ function Collection({ likedPic, addToCollection, setModal, modal, currentPic, se
 
       <div className='card-list'>
         {pics.map((pic, index) => (
-          <div className='card' key={index} onClick={() => {
-            setModal(!modal)
-            setCurrentPic(pic)
-          }}>
+          <div
+            className='card'
+            key={index}
+            onClick={() => {
+              setModal(!modal);
+              setCurrentPic(pic);
+            }}
+          >
             <img
               className='card--image'
               alt={pic.alt_description} //alt desctription of the image
@@ -113,20 +133,20 @@ function Collection({ likedPic, addToCollection, setModal, modal, currentPic, se
         ))}
 
         {modal ? (
-        <Modal>
-          <div className='modal'>
-            <img className='modal-body' src={currentPic.urls.regular}></img>
-            
-            {/* <button tittle='Add to collection' className='addtocollection'>
+          <Modal>
+            <div className='modal'>
+              <img className='modal-body' src={currentPic.urls.regular}></img>
+
+              {/* <button tittle='Add to collection' className='addtocollection'>
               {' '}
               ➕{' '}
             </button> */}
-            <button onClick={() => setModal(!modal)}>❌</button>
-          </div>
-        </Modal>
-      ) : (
-        ''
-      )}
+              <button onClick={() => setModal(!modal)}>❌</button>
+            </div>
+          </Modal>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );
