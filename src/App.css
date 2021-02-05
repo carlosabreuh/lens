@@ -134,6 +134,11 @@ li a:hover {
 
 .card-list {
   column-count: 3;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  
 }
 
 .card {
