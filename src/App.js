@@ -15,8 +15,6 @@ function App() {
   console.log(
     '%c Thank you for stopping by! 😀  This page was built using React.js, React-Router along with JavaScript ES6 making an API call to Unsplash.🤓   ',
     'color:blue; font-size:30px'
-
-    
   );
   var style =
     'color: tomato; background:#eee; -webkit-text-stroke: 1px black; font-size:30px;';
@@ -93,7 +91,7 @@ function Home() {
 function About() {
   return (
     <div>
-      <h2></h2>
+      <h3></h3>
     </div>
   );
 }
@@ -113,6 +111,7 @@ function Collection({
     // <img src={likedPic.state.value}
     <div>
       <h2>Your Liked Photos!</h2>
+      
 
       <div className='card-list'>
         {pics.map((pic, index) => (
@@ -139,10 +138,7 @@ function Collection({
             <div className='modal'>
               <img className='modal-body' src={currentPic.urls.regular}></img>
 
-              {/* <button tittle='Add to collection' className='addtocollection'>
-              {' '}
-              ➕{' '}
-            </button> */}
+              
               <button onClick={() => setModal(!modal)}>❌</button>
             </div>
           </Modal>
