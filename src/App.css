@@ -48,15 +48,13 @@ body {
 
 /*Nav Bar*/
 
-.topnav {
- 
-}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(28, 25, 25);
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -68,10 +66,11 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
-  padding: 14px 16px;
+  padding: 19px 19px;
   text-decoration: none;
+  
 }
 
 li a:hover {
@@ -80,8 +79,9 @@ li a:hover {
 
 /* Change the link color on hover */
 li a:hover {
-  background-color: #555;
+  background-color: #cc1e07;
   color: white;
+  
 }
 
 .App {
