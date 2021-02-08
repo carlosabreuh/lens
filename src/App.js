@@ -43,6 +43,7 @@ function App() {
             </li>
           </ul>
           <div className='container'>
+            
             <h2 className='tittle'>React Photo Search</h2>
           </div>
           <hr />

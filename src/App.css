@@ -22,7 +22,7 @@ amplify-authenticator {
 body {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   background-size: 400% 400%;
-  background-image: url(back2.jpg);
+  /* background-image: url(back2.jpg); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -48,7 +48,6 @@ body {
 
 /*Nav Bar*/
 
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -70,7 +69,6 @@ li a {
   text-align: center;
   padding: 19px 19px;
   text-decoration: none;
-  
 }
 
 li a:hover {
@@ -81,7 +79,6 @@ li a:hover {
 li a:hover {
   background-color: #cc1e07;
   color: white;
-  
 }
 
 .App {
@@ -104,7 +101,8 @@ li a:hover {
 }
 
 .form {
-  display: grid;
+  display: flex;
+  
 }
 
 .label {
@@ -138,7 +136,6 @@ li a:hover {
   height: 100%;
   width: 100%;
   padding: 50px;
-  
 }
 
 .card {
@@ -192,3 +189,37 @@ li a:hover {
   background: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
+
+
+
+/* ===== FOOTER ===== */
+.footer{
+  background-color: var(--nav-color);
+  color: var(--second-color);
+  text-align: center;
+  padding: 2rem 0;
+  display: block;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.719);
+  z-index: var(--z-normal);
+  position:relative;
+}
+
+
+.footer__title{
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
+  font-weight: var(--font-semi);
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+
+

@@ -31,13 +31,13 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
     console.log('Submitting the Form');
   };
   return (
-    
     <>
       <form className='form' onSubmit={searchPhotos}>
         <label className='label' htmlFor='query'>
           {' '}
           📷
         </label>
+
         <input // This is our Search Field
           type='text' //The search input will be a string
           name='query'
@@ -46,13 +46,12 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)} //This will update the state of our value
         />
-        
+
         <button type='submit' className='button'>
           Search
         </button>
-        
       </form>
-      
+
       <div className='card-list'>
         {pics.map((pic, index) => (
           <div className='card' key={index}>
@@ -75,9 +74,11 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
         <Modal>
           <div className='modal'>
             <img className='modal-body' src={currentPic.urls.regular}></img>
-            <button onClick={() => addToCollection([currentPic, ...likedPic])}>{' '} ❤️{' '} 
+            <button onClick={() => addToCollection([currentPic, ...likedPic])}>
+              {' '}
+              ❤️{' '}
             </button>
-            
+
             <button onClick={() => setModal(!modal)}>❌</button>
           </div>
         </Modal>
