@@ -1,3 +1,4 @@
+/* ===== AWS Amplify properties===== */
 :root {
   --amplify-primary-color: #ff6347;
   --amplify-primary-tint: #7d2b1c;
@@ -10,6 +11,7 @@
   --amplify-white: rgba(224, 221, 221, 0.719); /* opacity of Login window*/
 }
 
+/* ===== AUTHENTICATOR PAGE - ****AWS AMPLIFY===== */
 amplify-authenticator {
   background-image: url(login.jpg);
   padding: 1000px;
@@ -22,31 +24,19 @@ amplify-authenticator {
 body {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   background-size: 400% 400%;
-  /* background-image: url(back2.jpg); */
+  background-image: url(back2.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  font-size: 10px;
+  font-size: 15px; /*  NAV BAR FONT SIZE*/
   box-sizing: border-box;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   /* background-repeat: inherit; */
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/*Nav Bar*/
+/* ===== NAV BAR ***REACT ROUTER***===== */
 
 ul {
   list-style-type: none;
@@ -81,61 +71,54 @@ li a:hover {
   color: white;
 }
 
-.App {
+.App {  /*This is the child element of the div with className="App"*/
   margin: 0;
   padding: 0;
 }
 
-.container {
-  margin: 2 auto;
-  /* max-width: 100px; */
-  padding: 20px;
-  justify-content: center;
+.label {
+  font-size: 3rem;
+  margin-bottom: 1rem; 
 }
 
-.tittle {
-  font-size: 20px;
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+}
+
+.title {
+  font-size: 4.4rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-  color: #cc1e07;
+  align-items: center;
 }
 
 .form {
   display: flex;
-  
-}
-
-.label {
-  font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .input {
-  width: 400px;
-  height: 30px;
-  padding: 5px;
-  border-radius: 4px;
-  outline: none;
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 1rem;
 }
 
 .button {
-  width: 60px;
-  height: 30px;
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  border: none;
-  
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
 }
 
-.button {
+.button:hover {
   background-color: rgba(0, 0, 0, 0.85);
-}
-
-.card-list {
-  column-count: 3;
-  overflow-y: scroll;
-  height: 100%;
-  width: 100%;
-  padding: 50px;
 }
 
 .card {
@@ -147,8 +130,10 @@ li a:hover {
   flex: 100%;
   margin-top: 1rem;
   border-radius: 10px;
-  grid-gap: 20px;
-  padding: 25px;
+}
+
+.card-list {
+  column-count: 3;
 }
 
 @media (min-width: 768px) {
@@ -167,8 +152,9 @@ li a:hover {
     column-count: 1;
   }
 }
-/* MODAL */
-/* Background effect. It covers the entire site */
+
+/* ===== MODAL===== */
+
 .modal {
   /* This way it could be display flex or grid or whatever also. */
   width: 50px; /* This value will depend on what size you want for your loading image, let's say it's 50px */
@@ -190,10 +176,8 @@ li a:hover {
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
 
-
-
 /* ===== FOOTER ===== */
-.footer{
+.footer {
   background-color: var(--nav-color);
   color: var(--second-color);
   text-align: center;
@@ -201,11 +185,10 @@ li a:hover {
   display: block;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.719);
   z-index: var(--z-normal);
-  position:relative;
+  position: relative;
 }
 
-
-.footer__title{
+.footer__title {
   font-size: 2rem;
   margin-bottom: var(--mb-4);
   font-weight: var(--font-semi);
@@ -219,7 +202,3 @@ li a:hover {
   text-decoration: none;
   border-radius: 50%;
 }
-
-
-
-
