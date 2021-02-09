@@ -2,33 +2,38 @@
 import Modal from './Modal';
 import React, { useState } from 'react';
 import Unsplash, { toJson } from 'unsplash-js';
-
-// import Modal from './Modal';
-
+// Unsplash library to import into searchPhotos.js.
 //toJson is a helper function in the unsplash-js library that is used to convert the response into JSON format.
 
 const unsplash = new Unsplash({
-  accessKey: 'fh5tKV6AI5-k6RljpGlqQVWy8z0aVe7PZzlmKIBfh0U', //Access key to make API calls to Unsplash
+  accessKey: 'fh5tKV6AI5-k6RljpGlqQVWy8z0aVe7PZzlmKIBfh0U',
+  //Access key to make API calls to Unsplash
 });
 
 export default function SearchPhotos({ addToCollection, likedPic }) {
-  const [query, setQuery] = useState(''); //Defining the State
+  const [query, setQuery] = useState('');
+  //[query] stores the state, [setQuery] is a function that can be called to update the state.
+  //input from the search bar is a string, so an empty string as an initial value of the state is used.
+
   const [pics, setPics, likes] = useState([]);
-  // const [closeModal, setExpand] = useState(false);
+  //
 
   const [modal, setModal] = useState(false);
   const [currentPic, setCurrentPic] = useState(null);
 
   const searchPhotos = async (e) => {
-    e.preventDefault();
+    //Asynchronous function is triggered when clicking the Search Button.
+    e.preventDefault(); //this string will stop the page from reloading whenever the search button is clicked.
     unsplash.search
       .photos(query, 1, 10)
+      //This will define how many photos we'd want to render after the Search button is pressed.   I have it set to 10 for performance purposes.
       .then(toJson)
       .then((json) => {
         setPics(json.results);
+        //This will return the results in a JSON format.
       });
-    //Haben's mess>>>>>>> .then(()=> unsplash.search.photos(query,2,30).then(toJson).then((json)=> {setPics([...pics,json.results])}))
-    console.log('Submitting the Form');
+
+    console.log('Submitting the Form'); //A helper that will tell us the form was submitted when the search button is clicked.
   };
   return (
     <>
@@ -52,6 +57,8 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
         </button>
       </form>
 
+      {/**=======Card List Scope=========== */}
+
       <div className='card-list'>
         {pics.map((pic, index) => (
           <div className='card' key={index}>
@@ -69,6 +76,8 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
           </div>
         ))}
       </div>
+
+      {/**=======   MODAL   =========== */}
 
       {modal ? (
         <Modal>
