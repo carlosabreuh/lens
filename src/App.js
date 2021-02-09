@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+//Browser router keeps your UI in sync with the URL
 import './App.css';
 import SearchPhotos from './searchPhotos';
 import Modal from './Modal';
@@ -9,7 +10,7 @@ import config from './aws-exports';
 Amplify.configure(config);
 
 function App() {
-  const [likedPic, addToCollection] = useState([]); //
+  const [likedPic, addToCollection] = useState([]);  //KEYS / VAlUES
   const [modal, setModal] = useState(false);
   const [currentPic, setCurrentPic] = useState(null);
 
