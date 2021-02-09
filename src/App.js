@@ -9,24 +9,23 @@ import config from './aws-exports';
 Amplify.configure(config);
 
 function App() {
-  const [likedPic, addToCollection] = useState([]);
+  const [likedPic, addToCollection] = useState([]); //
   const [modal, setModal] = useState(false);
   const [currentPic, setCurrentPic] = useState(null);
-  console.log(
-    '%c Thank you for stopping by! 😀  This page was built using React.js, React-Router along with JavaScript ES6 making an API call to Unsplash.🤓   ',
-    'color:blue; font-size:30px'
-  );
+
   var style =
     'color: tomato; background:#eee; -webkit-text-stroke: 1px black; font-size:30px;';
   console.log(
-    '%cFeel free to search anything you like and save it to your personal collection.😎   The collection will live for the current session and removed once you log out.😅 -- The application is being hosted with AWS-Amplify, so do not worry about your email ending up in a dark hole🤨, its totally secure! 🤗🦾  Feel free to reach out to me for any questions or suggestions on how i can make this app better! carlos@abreuh.com🤜🤛 ',
+    '%cThank you for stopping by! 😀  This page was built using React.js, React-Router along with JavaScript ES6 making an API call to Unsplash.🤓 carlos@abreuh.com🤜🤛 ',
     style
   );
 
+// 
+
   return (
     <>
-      <AmplifySignOut />
-      <Router>
+      <AmplifySignOut /> {/**Sign out TAG */}
+      <Router> 
         <div className='topnav'>
           <ul>
             <li>
@@ -43,7 +42,6 @@ function App() {
             </li>
           </ul>
           <div className='container'>
-            
             <h2 className='tittle'>React Photo Search</h2>
           </div>
           <hr />
@@ -51,10 +49,10 @@ function App() {
           <Switch>
             <Route exact path='/'>
               <Home />
-              <SearchPhotos
+              <SearchPhotos /** */
                 likedPic={likedPic}
                 addToCollection={addToCollection}
-              />
+              /> 
             </Route>
             <Route path='/about'>
               <About />
@@ -109,10 +107,8 @@ function Collection({
   const pics = likedPic ? likedPic : [];
 
   return (
-    // <img src={likedPic.state.value}
     <div>
       <h2>Your Liked Photos!</h2>
-      
 
       <div className='card-list'>
         {pics.map((pic, index) => (
@@ -139,7 +135,6 @@ function Collection({
             <div className='modal'>
               <img className='modal-body' src={currentPic.urls.regular}></img>
 
-              
               <button onClick={() => setModal(!modal)}>❌</button>
             </div>
           </Modal>
