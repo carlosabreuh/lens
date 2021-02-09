@@ -26,3 +26,13 @@
         - DynamoDB
 
     https://main.d2vt17q3zaq50u.amplifyapp.com/
+
+    
+* References:
+    - https://reactjs.org/docs/
+    - https://unsplash.com/developers
+    - https://reactrouter.com/web/example/basic
+    - https://www.npmjs.com/package/react-router-dom
+    - https://www.digitalocean.com/
+
+
