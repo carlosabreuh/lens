@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -20,12 +20,16 @@ function App() {
     style
   );
 
-// 
+  //
 
   return (
     <>
       <AmplifySignOut /> {/**Sign out TAG */}
-      <Router> 
+      {/* React Router keeps the URL up to date as you navigate
+through the site. This preserves the browser history,
+making sure things like the back button and bookmarks
+work properly */}
+      <Router>
         <div className='topnav'>
           <ul>
             <li>
@@ -46,13 +50,21 @@ function App() {
           </div>
           <hr />
 
+          {/*
+          A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time
+        */}
+
           <Switch>
             <Route exact path='/'>
               <Home />
-              <SearchPhotos /** */
+              <SearchPhotos /** Search Photos TAG*/
                 likedPic={likedPic}
                 addToCollection={addToCollection}
-              /> 
+              />
             </Route>
             <Route path='/about'>
               <About />
@@ -73,12 +85,13 @@ function App() {
           </Switch>
         </div>
       </Router>
-
       <div className='App'></div>
     </>
   );
 }
 
+//You can think of these components as "pages"
+// in your app.
 function Home() {
   return (
     <div>
