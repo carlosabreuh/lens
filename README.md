@@ -17,8 +17,9 @@
         - HTML5
         - CSS
         - JavaScript
-        - JSX API
         - react-router-dom
+        - Redux
+        - Material UI
 
     * Backend
         - AWS Amplify
