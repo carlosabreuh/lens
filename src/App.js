@@ -1,4 +1,6 @@
 import React, { Component, useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //Browser router keeps your UI in sync with the URL
@@ -26,6 +28,8 @@ function App() {
   return (
     <>
       <AmplifySignOut /> {/**Sign out TAG */}
+      
+      
       {/* React Router keeps the URL up to date as you navigate
 through the site. This preserves the browser history,
 making sure things like the back button and bookmarks
@@ -40,14 +44,14 @@ work properly */}
               <Link to='/about'>About</Link>
             </li>
             <li>
-              <Link to='/collection' contentEditable='true'>
+              <Link to='/collection' onClick={() =>alert('Name your Collection!')}contentEditable='true'>
                 {' '}
                 Collection
               </Link>
             </li>
           </ul>
-          <div className='container'>
-            <h2 className='tittle'>React Photo Search</h2>
+          <div className='App'>
+            <h2>Hello Style!</h2>
           </div>
           <hr />
 
@@ -104,7 +108,9 @@ function Home() {
 function About() {
   return (
     <div>
-      <h3></h3>
+      <h1>
+          
+      </h1>
     </div>
   );
 }

@@ -2,6 +2,11 @@
 import Modal from './Modal';
 import React, { useState } from 'react';
 import Unsplash, { toJson } from 'unsplash-js';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import SaveIcon from '@material-ui/icons/Save'
+import { makeStyles } from '@material-ui/core/styles';
+
 // Unsplash library to import into searchPhotos.js.
 //toJson is a helper function in the unsplash-js library that is used to convert the response into JSON format.
 
@@ -43,18 +48,18 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
           📷
         </label>
 
-        <input // This is our Search Field
+        <TextField // This is our Search Field
           type='text' //The search input will be a string
           name='query'
-          className='input'
+          id='filled-basic'
           placeholder={`Try "dog" or "apple"`}
           value={query}
           onChange={(e) => setQuery(e.target.value)} //This will update the state of our value
         />
 
-        <button type='submit' className='button'>
+        <Button type='submit' variant='contained' color='primary'>
           Search
-        </button>
+        </Button>
       </form>
 
       {/**=======Card List Scope=========== */}
@@ -83,12 +88,22 @@ export default function SearchPhotos({ addToCollection, likedPic }) {
         <Modal>
           <div className='modal'>
             <img className='modal-body' src={currentPic.urls.regular}></img>
-            <button onClick={() => addToCollection([currentPic, ...likedPic])}>
+            <Button
+              onClick={() => alert('Name your Collection!')}
+              variant='contained'
+              color="primary"
+              size="small"
+              onClick={() => addToCollection([currentPic, ...likedPic])}
+              endIcon={<SaveIcon />}
+              startIcon={<SaveIcon />}
+            >
               {' '}
-              ❤️{' '}
-            </button>
+              Save to Collection{' '}
+            </Button>
 
-            <button onClick={() => setModal(!modal)}>❌</button>
+            <Button size="large" variant='contained' onClick={() => setModal(!modal)}>
+              ❌
+            </Button>
           </div>
         </Modal>
       ) : (
