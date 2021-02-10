@@ -51,7 +51,7 @@ work properly */}
             </li>
           </ul>
           <div className='App'>
-            <h2>Hello Style!</h2>
+            <h2>Search | Share | Enjoy</h2>
           </div>
           <hr />
 
@@ -128,7 +128,7 @@ function Collection({
 
   return (
     <div>
-      <h2>Your Liked Photos!</h2>
+      <h2></h2>
 
       <div className='card-list'>
         {pics.map((pic, index) => (
