@@ -44,7 +44,7 @@
 
 2. Fork and clone this repo to your local machine. To clone, enter:
 
-     `git clone https://github.com/fpolanco/queens-apple.git`
+     `git clone https://github.com/carlosabreuh/lens.git`
    
    CD into directory for this project in a terminal or editor of your choice.
 
