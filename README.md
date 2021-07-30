@@ -1,3 +1,10 @@
+ 
+ ![lens](lens.png)
+ 
+ 
+ 
+ 
+ 
  <p>The photo App is a place where the photo enthusiast can go and search for anything they desire.  The results of the images are in RAW format, and can be expanded to 4K resolution.  </p>
 
  <p>The app fetures a ♥️ Like button, where the user will have the chance to save the photo to their personal collection, and name that collection to anything they wish to call it. </p>
